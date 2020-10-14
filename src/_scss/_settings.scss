@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+$title: 'Merriweather', serif;
+$body: 'Open Sans', sans-serif;
+
+$primary: lighten(#2b3640, 5);
+$secondary: #40a9ff;
+$third: #ff3300;
+
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 968px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 959px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) and (max-width: 1499px) {
+    @content;
+  }
+}
+
+@mixin mediaXxl {
+  @media screen and (min-width: 1500px) {
+    @content;
+  }
+}

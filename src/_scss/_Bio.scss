@@ -1,0 +1,48 @@
+#Bio {
+  background: #e4e4e4;
+  padding: 20px 15px;
+  height: 440px;
+  overflow: hidden;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 1em;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $third;
+    outline: 1px solid slategrey;
+  }
+  h1 {
+    margin: 0;
+    font-family: $title;
+    color: $third;
+  }
+  .who__text {
+    margin-bottom: 2rem;
+    font-family: $body;
+    font-size: 1.2rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    .who__text {
+      margin-bottom: 1.5rem;
+    }
+  }
+  .who__list {
+    list-style-type: initial;
+    list-style-position: outside;
+    margin-left: 20px;
+    margin-bottom: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  @include mediaMd {
+    height: 350px;
+  }
+}

@@ -1,0 +1,28 @@
+#NavTabs {
+  .app-bar {
+    background: $primary;
+    border-radius: 10px;
+
+    .tabs {
+      border-radius: 10px;
+      .MuiTabs-indicator {
+        background-color: #40a9ff;
+      }
+      .tab {
+        color: lighten($primary, 40);
+
+        &:hover {
+          color: white;
+        }
+        &:focus {
+          color: #40a9ff;
+          font-weight: 700;
+        }
+      }
+      .Mui-selected {
+        color: #40a9ff;
+        font-weight: 700;
+      }
+    }
+  }
+}

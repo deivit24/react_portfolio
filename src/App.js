@@ -1,25 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
+import {makeStyles, Grid, Container} from '@material-ui/core'
+
+import Card from './components/Card'
+
+import NavTabs from './components/NavTabs'
 import './App.css';
 
-function App() {
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+}));
+const App = () => {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+   <div id="App" >
+    <Container fixed>
+      <Grid container spacing={2}>
+      <Grid item xs={12} sm={12} md={4}>
+        <Card username='deivit24'/>
+      </Grid>
+      <Grid item xs={12} sm={12} md={8}>
+        <NavTabs />
+      </Grid>
+      </Grid>
+    </Container>
+   </div>
+    
   );
 }
 

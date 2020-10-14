@@ -1,0 +1,69 @@
+#Card {
+  padding: 20px 15px;
+  background: $primary;
+  border-radius: 10px;
+  box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
+
+  .img {
+    text-align: center;
+    img {
+      width: 75%;
+      border-radius: 50%;
+    }
+  }
+  .name,
+  .location {
+    color: lighten($primary, 40);
+    font-family: $body;
+    text-align: center;
+  }
+  .skills {
+    color: lighten($primary, 40);
+    font-family: $body;
+    text-align: left;
+  }
+  .bio {
+    color: $secondary;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+
+@include mediaMd {
+  #Card {
+    display: flex;
+
+    .name,
+    .bio,
+    .location,
+    .skills {
+      margin: 2px 0px;
+    }
+
+    .img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+@include mediaSm {
+  #Card {
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .img {
+      width: 40%;
+    }
+    .skills {
+      display: none;
+    }
+    hr {
+      display: none;
+    }
+  }
+}
