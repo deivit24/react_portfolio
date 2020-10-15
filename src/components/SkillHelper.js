@@ -107,6 +107,12 @@ const backendSkills = [
 
 const tools = [
   {
+    name: 'Git',
+    img: GIT,
+    date: "2018-01-01",
+    num: 80
+  },
+  {
     name: 'Postman',
     img: POST,
     date: "2018-01-01",

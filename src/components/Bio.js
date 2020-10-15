@@ -2,6 +2,7 @@ import React from 'react'
 
 import {Grid, Container} from '@material-ui/core'
 
+
 const Bio = () => {
   return (
     <div id='Bio'>

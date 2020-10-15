@@ -9,6 +9,8 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Bio from './Bio'
 import Skills from './Skills'
+import Projects from './Projects'
+import Contact from './Contact'
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -16,8 +18,8 @@ function TabPanel(props) {
     <div
       role="tabpanel"
       hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
+      id={`scrollable-force-tabpanel-${index}`}
+      aria-labelledby={`scrollable-force-tab-${index}`}
       {...other}
     >
       {value === index && (
@@ -37,8 +39,8 @@ TabPanel.propTypes = {
 
 function a11yProps(index) {
   return {
-    id: `full-width-tab-${index}`,
-    'aria-controls': `full-width-tabpanel-${index}`,
+    id: `scrollable-force-tab-${index}`,
+    'aria-controls': `scrollable-force-tabpanel-${index}`,
   };
 }
 
@@ -69,13 +71,15 @@ const NavTabs =() => {
           value={value}
           onChange={handleChange}
           className='tabs'
-          variant="fullWidth"
-         
-          aria-label="full width tabs example"
+      
+          variant="scrollable"
+          scrollButtons="on"
+          aria-label="scrollable auto tabs example"
         >
           <Tab className='tab' icon={<p><i className="fas fa-user "></i> Bio</p>} {...a11yProps(0)} />
           <Tab className='tab' icon={<p><i className="fas fa-tools "></i> Skills</p>} {...a11yProps(1)} />
           <Tab className='tab' icon={<p><i className="fas fa-briefcase "></i> Projects</p>} {...a11yProps(2)} />
+          <Tab className='tab' icon={<p><i className="fas fa-briefcase "></i> Contact</p>} {...a11yProps(3)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -90,7 +94,10 @@ const NavTabs =() => {
           <Skills />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          Item Three
+          <Projects />
+        </TabPanel>
+        <TabPanel value={value} index={3} dir={theme.direction}>
+          <Contact />
         </TabPanel>
       </SwipeableViews>
     </div>

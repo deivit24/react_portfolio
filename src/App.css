@@ -230,7 +230,7 @@
   #Skills .skill-set__year {
     font-size: 1rem;
     line-height: 1;
-    color: #c0c5ca;
+    color: #35434f;
     margin-left: 1rem;
     margin-bottom: 0;
     margin-top: 0;
@@ -429,6 +429,145 @@
   @media screen and (max-width: 500px) {
     #Skills .skill-set__bar {
       height: 0.7rem; } }
+
+#Projects {
+  background: #e4e4e4;
+  padding: 20px 15px;
+  height: 440px;
+  overflow: hidden;
+  overflow-y: scroll; }
+  #Projects::-webkit-scrollbar {
+    width: 1em; }
+  #Projects::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+  #Projects::-webkit-scrollbar-thumb {
+    background-color: #ff3300;
+    outline: 1px solid slategrey; }
+  #Projects h1 {
+    margin: 0;
+    font-family: "Merriweather", serif;
+    color: #ff3300; }
+
+#ProjectCard {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 10px;
+  width: 100%;
+  height: 184px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all ease-in-out 0.5s; }
+  #ProjectCard:hover .project-card {
+    filter: blur(4px);
+    opacity: 0.3;
+    background-color: black;
+    cursor: pointer; }
+  #ProjectCard:hover .project-button {
+    opacity: 1;
+    z-index: 50; }
+    #ProjectCard:hover .project-button:hover {
+      background-color: #5ab4ff; }
+  #ProjectCard .project-card {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    height: 184px;
+    opacity: 0;
+    position: relative; }
+  #ProjectCard .project-button {
+    background-color: #40a9ff;
+    position: absolute;
+    width: 50%;
+    top: 33%;
+    left: 25%;
+    height: 50px;
+    font-size: 0.7rem;
+    opacity: 0; }
+
+.modal-title {
+  position: relative; }
+  .modal-title #close-button {
+    position: absolute;
+    top: -15px;
+    right: 0px;
+    cursor: pointer;
+    background: #ff3300;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white; }
+
+#LiveLinks {
+  display: flex;
+  justify-content: space-around; }
+  #LiveLinks .url,
+  #LiveLinks .git {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all ease-in-out 0.2s; }
+  #LiveLinks .url {
+    background-color: #40a9ff;
+    color: white; }
+    #LiveLinks .url:hover {
+      background-color: #e4e4e4;
+      color: #40a9ff; }
+  #LiveLinks .git {
+    background-color: #35434f;
+    color: white; }
+    #LiveLinks .git:hover {
+      background-color: #e4e4e4;
+      color: #35434f; }
+
+#Contact {
+  background: #e4e4e4;
+  padding: 20px 15px;
+  height: 440px;
+  overflow: hidden;
+  overflow-y: scroll; }
+  #Contact::-webkit-scrollbar {
+    width: 1em; }
+  #Contact::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+  #Contact::-webkit-scrollbar-thumb {
+    background-color: #ff3300;
+    outline: 1px solid slategrey; }
+  #Contact h1 {
+    margin: 0;
+    font-family: "Merriweather", serif;
+    color: #ff3300; }
+  #Contact .web-link {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 3rem; }
+    #Contact .web-link a {
+      text-decoration: none;
+      color: #35434f; }
+      #Contact .web-link a:hover {
+        color: #40a9ff; }
+  #Contact .item-left {
+    text-align: center; }
+    #Contact .item-left a {
+      text-decoration: none;
+      color: #35434f;
+      font-size: 1.5rem; }
+      #Contact .item-left a:hover {
+        color: #212931; }
+  #Contact .resume {
+    text-align: center;
+    margin-top: 50px; }
+    #Contact .resume a {
+      text-decoration: none;
+      font-size: 2rem;
+      color: white;
+      background: #35434f;
+      padding: 10px 15px;
+      border-radius: 10px;
+      transition: all ease-in-out 0.2s; }
+      #Contact .resume a:hover {
+        background: #40a9ff;
+        color: white; }
 
 #App {
   padding: 0;

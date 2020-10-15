@@ -1,0 +1,115 @@
+#Projects {
+  background: #e4e4e4;
+  padding: 20px 15px;
+  height: 440px;
+  overflow: hidden;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 1em;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $third;
+    outline: 1px solid slategrey;
+  }
+  h1 {
+    margin: 0;
+    font-family: $title;
+    color: $third;
+  }
+}
+
+#ProjectCard {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 10px;
+  width: 100%;
+  height: 184px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all ease-in-out 0.5s;
+  &:hover .project-card {
+    filter: blur(4px);
+    opacity: 0.3;
+    background-color: black;
+    cursor: pointer;
+  }
+
+  &:hover .project-button {
+    opacity: 1;
+    z-index: 50;
+    &:hover {
+      background-color: lighten($secondary, 5);
+    }
+  }
+  .project-card {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    width: 100%;
+    height: 184px;
+    opacity: 0;
+    position: relative;
+  }
+  .project-button {
+    background-color: $secondary;
+    position: absolute;
+    width: 50%;
+    top: 33%;
+    left: 25%;
+    height: 50px;
+    font-size: 0.7rem;
+    opacity: 0;
+  }
+}
+
+.modal-title {
+  position: relative;
+  #close-button {
+    position: absolute;
+    top: -15px;
+    right: 0px;
+    cursor: pointer;
+    background: $third;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+  }
+}
+
+#LiveLinks {
+  display: flex;
+  justify-content: space-around;
+
+  .url,
+  .git {
+    text-decoration: none;
+
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all ease-in-out 0.2s;
+  }
+  .url {
+    background-color: $secondary;
+    color: white;
+    &:hover {
+      background-color: #e4e4e4;
+      color: $secondary;
+    }
+  }
+  .git {
+    background-color: $primary;
+    color: white;
+    &:hover {
+      background-color: #e4e4e4;
+      color: $primary;
+    }
+  }
+}
