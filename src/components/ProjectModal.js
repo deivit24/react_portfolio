@@ -1,6 +1,6 @@
 // React
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+
 // Proptypes
 import PropTypes from 'prop-types';
 // Keeping this here becasue I copied the staright from material ui
