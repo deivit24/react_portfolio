@@ -1,5 +1,5 @@
 import React from 'react';
-import {makeStyles, Grid, Container} from '@material-ui/core'
+import { Grid, Container} from '@material-ui/core'
 
 import Card from './components/Card'
 
@@ -7,16 +7,7 @@ import NavTabs from './components/NavTabs'
 import './App.css';
 
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-}));
+
 const App = () => {
  
   return (
